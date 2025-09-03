@@ -18,86 +18,92 @@ set $right l
 
 ### apps
 # Your preferred terminal emulator
-    set $term kitty
+set $term kitty
 # Your preferred application launcher
-    set $menu fuzzel
-    set $webBrowser firefox
+set $menu fuzzel
+set $webBrowser firefox
+
+### cursor
+# cursor theme
+set $cursorTheme GoogleDot-Black
+# cursor size
+set $cursorSize 22
 
 ## Shortcuts
-    set $terminalOpen $mod+t
-    set $appLauncherOpen $mod+d
-    set $webBrowserOpen $sMod+t
-    set $killWindow $mod+q
-    set $reloadConfig $sMod+c
-    set $exitSway $sMod+e
+set $terminalOpen $mod+t
+set $appLauncherOpen $mod+d
+set $webBrowserOpen $sMod+t
+set $killWindow $mod+q
+set $reloadConfig $sMod+c
+set $exitSway $sMod+e
 
-    # Focus movement
-    set $focusLeft $mod+$left
-    set $focusDown $mod+$down
-    set $focusUp $mod+$up
-    set $focusRight $mod+$right
+# Focus movement
+set $focusLeft $mod+$left
+set $focusDown $mod+$down
+set $focusUp $mod+$up
+set $focusRight $mod+$right
 
-    # Window movement
-    set $moveLeft $sMod+$left
-    set $moveDown $sMod+$down
-    set $moveUp $sMod+$up
-    set $moveRight $sMod+$right
+# Window movement
+set $moveLeft $sMod+$left
+set $moveDown $sMod+$down
+set $moveUp $sMod+$up
+set $moveRight $sMod+$right
 
-    # Workspace switching base
-    set $openWorkspace $mod
-    set $moveToWorkspace $sMod
+# Workspace switching base
+set $openWorkspace $mod
+set $moveToWorkspace $sMod
 
-    # Layout controls
-    set $splitHorizontal $mod+b
-    set $splitVertical $mod+v
-    set $layoutStacking $mod+s
-    set $layoutTabbed $mod+w
-    set $layoutToggleSplit $mod+e
-    set $toggleFullscreen $mod+f
-    set $toggleFloating $sMod+space
-    set $focusModeToggle $mod+space
-    set $focusParent $mod+a
+# Layout controls
+set $splitHorizontal $mod+b
+set $splitVertical $mod+v
+set $layoutStacking $mod+s
+set $layoutTabbed $mod+w
+set $layoutToggleSplit $mod+e
+set $toggleFullscreen $mod+f
+set $toggleFloating $sMod+space
+set $focusModeToggle $mod+space
+set $focusParent $mod+a
 
-    # Scratchpad
-    set $moveToScratchpad $sMod+minus
-    set $showScratchpad $mod+minus
+# Scratchpad
+set $moveToScratchpad $sMod+minus
+set $showScratchpad $mod+minus
 
-    # Resize mode
-    set $resizeMode $mod+r
+# Resize mode
+set $resizeMode $mod+r
 
 ## Stuff bellow here you shouldn't edit unless you know what you are doing
-    # Utilities
-    set $volumeMute XF86AudioMute
-    set $volumeDown XF86AudioLowerVolume
-    set $volumeUp XF86AudioRaiseVolume
-    set $micMute XF86AudioMicMute
-    set $brightnessDown XF86MonBrightnessDown
-    set $brightnessUp XF86MonBrightnessUp
-    set $screenshot Print
+# Utilities
+set $volumeMute XF86AudioMute
+set $volumeDown XF86AudioLowerVolume
+set $volumeUp XF86AudioRaiseVolume
+set $micMute XF86AudioMicMute
+set $brightnessDown XF86MonBrightnessDown
+set $brightnessUp XF86MonBrightnessUp
+set $screenshot Print
 
-    # Workspace switching (open workspace)
-    set $openWorkspace1  $openWorkspace+1
-    set $openWorkspace2  $openWorkspace+2
-    set $openWorkspace3  $openWorkspace+3
-    set $openWorkspace4  $openWorkspace+4
-    set $openWorkspace5  $openWorkspace+5
-    set $openWorkspace6  $openWorkspace+6
-    set $openWorkspace7  $openWorkspace+7
-    set $openWorkspace8  $openWorkspace+8
-    set $openWorkspace9  $openWorkspace+9
-    set $openWorkspace10 $openWorkspace+0
+# Workspace switching (open workspace)
+set $openWorkspace1  $openWorkspace+1
+set $openWorkspace2  $openWorkspace+2
+set $openWorkspace3  $openWorkspace+3
+set $openWorkspace4  $openWorkspace+4
+set $openWorkspace5  $openWorkspace+5
+set $openWorkspace6  $openWorkspace+6
+set $openWorkspace7  $openWorkspace+7
+set $openWorkspace8  $openWorkspace+8
+set $openWorkspace9  $openWorkspace+9
+set $openWorkspace10 $openWorkspace+0
 
-    # Move to workspace
-    set $moveToWorkspace1  $moveToWorkspace+1
-    set $moveToWorkspace2  $moveToWorkspace+2
-    set $moveToWorkspace3  $moveToWorkspace+3
-    set $moveToWorkspace4  $moveToWorkspace+4
-    set $moveToWorkspace5  $moveToWorkspace+5
-    set $moveToWorkspace6  $moveToWorkspace+6
-    set $moveToWorkspace7  $moveToWorkspace+7
-    set $moveToWorkspace8  $moveToWorkspace+8
-    set $moveToWorkspace9  $moveToWorkspace+9
-    set $moveToWorkspace10 $moveToWorkspace+0
+# Move to workspace
+set $moveToWorkspace1  $moveToWorkspace+1
+set $moveToWorkspace2  $moveToWorkspace+2
+set $moveToWorkspace3  $moveToWorkspace+3
+set $moveToWorkspace4  $moveToWorkspace+4
+set $moveToWorkspace5  $moveToWorkspace+5
+set $moveToWorkspace6  $moveToWorkspace+6
+set $moveToWorkspace7  $moveToWorkspace+7
+set $moveToWorkspace8  $moveToWorkspace+8
+set $moveToWorkspace9  $moveToWorkspace+9
+set $moveToWorkspace10 $moveToWorkspace+0
 
 ### Output configuration
 #
@@ -106,139 +112,139 @@ output * bg /home/rhylie/.config/sway/rubiks-cube.png fill
 
 input type:keyboard {
     xkb_layout "gb"
-    xkb_options "caps:escape"
-    repeat_delay "250"
-    repeat_rate "25"
+        xkb_options "caps:escape"
+        repeat_delay "250"
+        repeat_rate "25"
 }
 
 ### Key bindings
 #
 # Basics:
 #
-    # Start a terminal
-    bindsym $terminalOpen exec $term
-    # Kill focused window
-    bindsym $killWindow kill
-    # Start your launcher
-    bindsym $appLauncherOpen exec $menu
-    # Start your web browser
-    bindsym $webBrowserOpen exec $webBrowser
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    floating_modifier $mod normal
-    # Reload the configuration file
-    bindsym $reloadConfig reload
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $exitSway exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+# Start a terminal
+bindsym $terminalOpen exec $term
+# Kill focused window
+bindsym $killWindow kill
+# Start your launcher
+bindsym $appLauncherOpen exec $menu
+# Start your web browser
+bindsym $webBrowserOpen exec $webBrowser
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+# Reload the configuration file
+bindsym $reloadConfig reload
+# Exit sway (logs you out of your Wayland session)
+bindsym $exitSway exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 #
 # Moving around:
 #
-    # Move your focus around
-    bindsym $focusLeft focus left
-    bindsym $focusDown focus down
-    bindsym $focusUp focus up
-    bindsym $focusRight focus right
-    # Move the focused window with the same, but add Shift
-    bindsym $moveLeft move left
-    bindsym $moveDown move down
-    bindsym $moveUp move up
-    bindsym $moveRight move right
+# Move your focus around
+bindsym $focusLeft focus left
+bindsym $focusDown focus down
+bindsym $focusUp focus up
+bindsym $focusRight focus right
+# Move the focused window with the same, but add Shift
+bindsym $moveLeft move left
+bindsym $moveDown move down
+bindsym $moveUp move up
+bindsym $moveRight move right
 
 #
 # Workspaces:
 #
-    # Switch to workspace
-    bindsym $openWorkspace1 workspace number 1
-    bindsym $openWorkspace2 workspace number 2
-    bindsym $openWorkspace3 workspace number 3
-    bindsym $openWorkspace4 workspace number 4
-    bindsym $openWorkspace5 workspace number 5
-    bindsym $openWorkspace6 workspace number 6
-    bindsym $openWorkspace7 workspace number 7
-    bindsym $openWorkspace8 workspace number 8
-    bindsym $openWorkspace9 workspace number 9
-    bindsym $openWorkspace10 workspace number 10
-    # Move focused container to workspace
-    bindsym $moveToWorkspace1 move container to workspace number 1
-    bindsym $moveToWorkspace2 move container to workspace number 2
-    bindsym $moveToWorkspace3 move container to workspace number 3
-    bindsym $moveToWorkspace4 move container to workspace number 4
-    bindsym $moveToWorkspace5 move container to workspace number 5
-    bindsym $moveToWorkspace6 move container to workspace number 6
-    bindsym $moveToWorkspace7 move container to workspace number 7
-    bindsym $moveToWorkspace8 move container to workspace number 8
-    bindsym $moveToWorkspace9 move container to workspace number 9
-    bindsym $moveToWorkspace10 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
+# Switch to workspace
+bindsym $openWorkspace1 workspace number 1
+bindsym $openWorkspace2 workspace number 2
+bindsym $openWorkspace3 workspace number 3
+bindsym $openWorkspace4 workspace number 4
+bindsym $openWorkspace5 workspace number 5
+bindsym $openWorkspace6 workspace number 6
+bindsym $openWorkspace7 workspace number 7
+bindsym $openWorkspace8 workspace number 8
+bindsym $openWorkspace9 workspace number 9
+bindsym $openWorkspace10 workspace number 10
+# Move focused container to workspace
+bindsym $moveToWorkspace1 move container to workspace number 1
+bindsym $moveToWorkspace2 move container to workspace number 2
+bindsym $moveToWorkspace3 move container to workspace number 3
+bindsym $moveToWorkspace4 move container to workspace number 4
+bindsym $moveToWorkspace5 move container to workspace number 5
+bindsym $moveToWorkspace6 move container to workspace number 6
+bindsym $moveToWorkspace7 move container to workspace number 7
+bindsym $moveToWorkspace8 move container to workspace number 8
+bindsym $moveToWorkspace9 move container to workspace number 9
+bindsym $moveToWorkspace10 move container to workspace number 10
+# Note: workspaces can have any name you want, not just numbers.
+# We just use 1-10 as the default.
 
 #
 # Layout stuff:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-    bindsym $splitHorizontal splith
-    bindsym $splitVertical splitv
-    # Switch the current container between different layout styles
-    bindsym $layoutStacking layout stacking
-    bindsym $layoutTabbed layout tabbed
-    bindsym $layoutToggleSplit layout toggle split
-    # Make the current focus fullscreen
-    bindsym $toggleFullscreen fullscreen
-    # Toggle the current focus between tiling and floating mode
-    bindsym $toggleFloating floating toggle
-    # Swap focus between the tiling area and the floating area
-    bindsym $focusModeToggle focus mode_toggle
-    # Move focus to the parent container
-    bindsym $focusParent focus parent
+# You can "split" the current object of your focus with
+# $mod+b or $mod+v, for horizontal and vertical splits
+# respectively.
+bindsym $splitHorizontal splith
+bindsym $splitVertical splitv
+# Switch the current container between different layout styles
+bindsym $layoutStacking layout stacking
+bindsym $layoutTabbed layout tabbed
+bindsym $layoutToggleSplit layout toggle split
+# Make the current focus fullscreen
+bindsym $toggleFullscreen fullscreen
+# Toggle the current focus between tiling and floating mode
+bindsym $toggleFloating floating toggle
+# Swap focus between the tiling area and the floating area
+bindsym $focusModeToggle focus mode_toggle
+# Move focus to the parent container
+bindsym $focusParent focus parent
 
 #
 # Scratchpad:
 #
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
-    # Move the currently focused window to the scratchpad
-    bindsym $moveToScratchpad move scratchpad
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $showScratchpad scratchpad show
+# Sway has a "scratchpad", which is a bag of holding for windows.
+# You can send windows there and get them back later.
+# Move the currently focused window to the scratchpad
+bindsym $moveToScratchpad move scratchpad
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $showScratchpad scratchpad show
 
 #
 # Resizing containers:
 #
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
+# left will shrink the containers width
+# right will grow the containers width
+# up will shrink the containers height
+# down will grow the containers height
     bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+        bindsym $down resize grow height 10px
+        bindsym $up resize shrink height 10px
+        bindsym $right resize grow width 10px
+# Return to default mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
 }
 bindsym $resizeMode mode "resize"
 
 #
 # Utilities:
 #
-    # Special keys to adjust volume via PulseAudio
-    bindsym --locked $volumeMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked $volumeDown exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked $volumeUp exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-    bindsym --locked $micMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
-    # Special keys to adjust brightness via brightnessctl
-    bindsym --locked $brightnessDown exec brightnessctl set 5%-
-    bindsym --locked $brightnessUp exec brightnessctl set 5%+
-    # Special key to take a screenshot with grim
-    bindsym $screenshot exec grim
+# Special keys to adjust volume via PulseAudio
+bindsym --locked $volumeMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+bindsym --locked $volumeDown exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+bindsym --locked $volumeUp exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+bindsym --locked $micMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+# Special keys to adjust brightness via brightnessctl
+bindsym --locked $brightnessDown exec brightnessctl set 5%-
+bindsym --locked $brightnessUp exec brightnessctl set 5%+
+# Special key to take a screenshot with grim
+bindsym $screenshot exec grim
 
 #
 # Status Bar:
