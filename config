@@ -217,6 +217,11 @@ bindsym $moveToScratchpad move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $showScratchpad scratchpad show
 
+# border
+default_border normal 0
+titlebar_border_thickness 0
+titlebar_padding 5
+
 #
 # Resizing containers:
 #
