@@ -5,6 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 include ./apps.conf
 include ./vars.conf
+include ./visual-vars.conf
 include ./advanced-vars.conf
 
 output * bg $wallpaper fill
@@ -151,7 +152,19 @@ bindsym $screenshot exec grim
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
-exec eww open barWindow
+exec $barCommand
+
+#
+# Title Bar:
+#
+# Read `man 5 sway` for more information about this section
+font $font
+title_align center
+
+#
+# Border
+#
+# Read `man 5 sway` for more information about this section
+hide_edge_borders $edgeBorders
 
 include /etc/sway/config.d/*
