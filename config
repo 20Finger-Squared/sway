@@ -13,9 +13,9 @@ seat seat0 xcursor_theme $cursorTheme $cursorSize
 
 input type:keyboard {
     xkb_layout "gb"
-        xkb_options "caps:escape"
-        repeat_delay "250"
-        repeat_rate "25"
+    xkb_options "caps:escape"
+    repeat_delay "250"
+    repeat_rate "25"
 }
 
 ### Key bindings
@@ -124,7 +124,7 @@ mode "resize" {
 # right will grow the containers width
 # up will shrink the containers height
 # down will grow the containers height
-    bindsym $left resize shrink width 10px
+        bindsym $left resize shrink width 10px
         bindsym $down resize grow height 10px
         bindsym $up resize shrink height 10px
         bindsym $right resize grow width 10px
